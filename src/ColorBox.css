@@ -5,7 +5,7 @@
     display: inline-block;
     position: relative;
     cursor: pointer;
-    margin-bottom: -3.5px;
+    margin-bottom: -4.5px;
 }
 
 .copy-button{
@@ -23,6 +23,7 @@
     font-size: 1rem;
     line-height: 30px;
     color: white;
+    text-decoration: none;
     border: none;
     opacity: 0;
 }
@@ -35,7 +36,7 @@
 .box-content{
     position: absolute;
     width: 100%;
-    padding: 10px 0 10px 10px;
+    padding: 10px;
     left: 0px;
     bottom: 0px;
     color: black;
