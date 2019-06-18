@@ -4,7 +4,8 @@ import PaletteFooter from "./PaletteFooter";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
-export default class SingleColorPalette extends Component {
+
+class SingleColorPalette extends Component {
   constructor(props) {
     super(props);
     this._shades = this.gatherShades(this.props.palette, this.props.colorId);
@@ -54,3 +55,5 @@ export default class SingleColorPalette extends Component {
     );
   }
 }
+
+export default SingleColorPalette;
