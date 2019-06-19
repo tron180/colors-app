@@ -26,7 +26,7 @@ export default {
     }
   },
 
-  palettes: {
+  Palettes: {
     boxSizing: "border-box",
     width: "100%",
     display: "grid",
