@@ -42,16 +42,16 @@ class SingleColorPalette extends Component {
       />
     ));
     return (
-      <div className={classes.Palette}>
-        <Navbar handleChange={this.changeFormat} showingAllColors={false} />
-        <div className={classes.colors}>
-          {colorBoxes}
-          <div className={classes.goBack}>
-            <Link to={`/palette/${id}`}>GO BACK</Link>
+        <div className={classes.Palette}>
+          <Navbar handleChange={this.changeFormat} showingAllColors={false} />
+          <div className={classes.colors}>
+            {colorBoxes}
+            <div className={classes.goBack}>
+              <Link to={`/palette/${id}`}>GO BACK</Link>
+            </div>
           </div>
+          <PaletteFooter paletteName={paletteName} emoji={emoji} />
         </div>
-        <PaletteFooter paletteName={paletteName} emoji={emoji} />
-      </div>
     );
   }
 }

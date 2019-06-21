@@ -15,8 +15,7 @@ class ColorPickerForm extends Component {
     this.updateCurrentColor = this.updateCurrentColor.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-	}
-	
+  }
 
   componentDidMount() {
     ValidatorForm.addValidationRule("isColorNameUnique", value =>
@@ -40,8 +39,8 @@ class ColorPickerForm extends Component {
       color: this.state.currentColor,
       name: this.state.newColorName
     };
-		this.props.addNewColor(newColor);
-		this.setState({newColorName:""})
+    this.props.addNewColor(newColor);
+    this.setState({ newColorName: "" });
   }
 
   handleChange(e) {
@@ -58,16 +57,16 @@ class ColorPickerForm extends Component {
         <ChromePicker
           color={currentColor}
           onChangeComplete={this.updateCurrentColor}
-					className={classes.picker}
+          className={classes.picker}
         />
-        <ValidatorForm onSubmit={this.handleSubmit}>
+        <ValidatorForm onSubmit={this.handleSubmit} instantValidate={false}>
           <TextValidator
             value={newColorName}
-						className={classes.colorNameInput}
-						placeholder="Color Name..."
+            className={classes.colorNameInput}
+            placeholder="Color Name..."
             name="newColorName"
-						variant="filled"
-						margin="normal"
+            variant="filled"
+            margin="normal"
             onChange={this.handleChange}
             validators={["required", "isColorNameUnique", "isColorUnique"]}
             errorMessages={[
@@ -77,7 +76,7 @@ class ColorPickerForm extends Component {
             ]}
           />
           <Button
-					className={classes.addColor}
+            className={classes.addColor}
             variant="contained"
             color="primary"
             type="submit"

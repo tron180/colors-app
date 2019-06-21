@@ -2,8 +2,17 @@ import sizes from "./sizes";
 import bg from "./bg.svg";
 
 export default {
+  "@global":{
+    ".fade-exit":{
+      opacity:"1"
+    },
+    ".fade-exit-active":{
+      opacity:0,
+      transition:"opacity 500ms ease-out"
+    }
+  },
   root: {
-    backgroundColor: "purple",
+    backgroundColor: "#5109aa",
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
