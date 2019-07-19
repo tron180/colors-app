@@ -86,7 +86,7 @@ class App extends Component {
                 />
                 <Route
                   exact
-                  path="/"
+                  path="/colors-app/"
                   render={routeProps => (
                     <div className="page">
                       <PaletteList
